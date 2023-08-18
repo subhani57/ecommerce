@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Check Sequence</title>
+</head>
+<body>
+  <h1>Check Sequence</h1>
+  <%= form_tag(sequences_check_path, method: 'get') do %>
+    <label for="number">Enter a number between 1 and 25:</label>
+    <%= text_field_tag(:number) %>
+    <%= submit_tag('Check') %>
+  <% end %>
+
+  <% if @output %>
+    <p><%= @output %></p>
+  <% end %>
+</body>
+</html>
